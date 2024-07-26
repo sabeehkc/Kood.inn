@@ -11,9 +11,9 @@
 }
 
 :root{
-  --text-color: #fff;
-  --bg-color: #000;
-  --main-color: #ffa343;
+  --text-color: #c3a619;
+  --bg-color: #000000;
+  --main-color: #f3eeea;
 
   --h1-font: 6rem;
   --h2-font: 3rem;
@@ -21,7 +21,7 @@
 }
 
 body{
-  color: var(--text-color);
+  color: var(--main-color);
   background: var(--bg-color);
 }
 
@@ -41,12 +41,12 @@ header{
 
 .logo{
   font-size: 33px;
-  color: var(--text-color);
+  color: var(--main-color);
   font-weight: 700;
 }
 
 span{
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
 .navbar{
@@ -54,7 +54,7 @@ span{
 }
 
 .navbar a{
-  color: var(--text-color);
+  color: var(--main-color);
   font-size: var(--p-font);
   font-weight: 500;
   margin: 15px 20px;
@@ -71,7 +71,7 @@ span{
 }
 
 .h-right a:first-child{
-  color: var(--text-color);
+  color: var(--main-color);
   font-size: var(--p-font);
   margin-right: 20px;
 }
@@ -79,7 +79,7 @@ span{
 .h-right a{
   vertical-align: middle;
   font-size: 20px;
-  color: var(--text-color);
+  color: var(--main-color);
   margin-right: 18px;
   margin-left: 5px;
   transition: all .50s ease;
@@ -91,7 +91,7 @@ span{
 }
 
 #menu-icon{
-  color: var(--text-color);
+  color: var(--main-color);
   font-size: 30px;
   cursor: pointer;
   z-index: 10001;
@@ -121,7 +121,7 @@ section{
   margin-top: 75px;
   text-transform: uppercase;
   letter-spacing: 6px;
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
 .home-text h1{
@@ -142,7 +142,7 @@ section{
 .btn {
   display: inline-block;
   padding: 13px 40px;
-  background: var(--main-color);
+  background: var(--text-color);
   color: var(--bg-color);
   font-size: 15px;
   font-weight: 600;
@@ -154,9 +154,9 @@ section{
 
 .btn:hover{
   transform: translateX(10px);
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--main-color);
   background: transparent;
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 header.sticky{
@@ -202,7 +202,7 @@ header.sticky{
 }
 
 .feature-content h4:hover{
-  color: var(--main-color);
+  color: var(--text-color);
 }
 
 .holiday{
@@ -319,7 +319,7 @@ header.sticky{
 .culture-text h5{
   font-size: 22px;
   font-weight: 600;
-  color: var(--main-color);
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 6px;
   margin-bottom: 20px;
@@ -369,7 +369,7 @@ header.sticky{
   padding: 15px;
   background: #202020;
   font-size: var(--p-font);
-  color: var(--text-color);
+  color: var(--main-color);
   border-radius: 5px;
 }
 
@@ -469,7 +469,7 @@ header.sticky{
 
 .footer-box a:hover{
   transform: translateX(-5px);
-  color: var(--text-color);
+  color: var(--main-color);
 }
 
 .social a{
@@ -479,7 +479,7 @@ header.sticky{
   height: 45px;
   width: 45px;
   background: #202020;
-  color: var(--text-color);
+  color: var(--main-color);
   font-size: 20px;
   border-radius: 50%;
   margin-right: 8px;
@@ -487,7 +487,7 @@ header.sticky{
 }
 
 .social a:hover{
-  background: var(--main-color);
+  background: var(--text-color);
   color: var(--bg-color);
   transform: translateX(-4px);
 }
@@ -612,3 +612,231 @@ header.sticky{
     padding: 60px 3% 50px;
   }
 }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #6e5d34;
+  font-size: 26px;
+}
+.app-title p {
+ font-size: 0.8rem; 
+ color: #8e8888;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #e6e5ee;
+}
+
+.app-contact {
+  margin-top: auto;
+  font-size: 8px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.message.select-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  /* text-transform: uppercase; */
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control option {
+  background-color: #0c0b19;
+  color: #f0f0f0;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #e4e3e8;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: var(--text-color);
+}
+
+.dribbble {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+
+

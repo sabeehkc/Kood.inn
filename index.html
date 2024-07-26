@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kood.inn</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" href="assets/logo.jpg" type="image/gif" sizes="10x">
     <!-- box Icon-->
-    <link rel="stylesheet"href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <!-- remix icon-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
 </head>
 <body>
 
@@ -26,10 +27,10 @@
 
     <ul class="navbar">
       <li><a href="#home">Home</a></li>
-      <li><a href="#feature">Information</a></li>
       <li><a href="#holiday">About us</a></li>
+      <li><a href="#tour">Packages</a></li>
       <li><a href="#culture">Culture</a></li>
-      <li><a href="#contact">Contact us</a></li>
+      <li><a href="#contactform">Contact us</a></li>
     </ul>
 
     <div class="h-right">
@@ -46,8 +47,8 @@
     <div class="home-text">
       <h5>Let's</h5>
       <h1>Planning your <br> own travel</h1>
-      <p>Indonesia, a Sotheast Aisn nation made up of thousands of
-        volcanic <br> islands, is home to hundreads of ethic groups speaking
+      <p>Explore stunning destinations and create your perfect itinerary with Kood.inn. <br>
+         Your adventure starts here!
       </p>
       <a href="https://wa.me/7907222989" target="_blank" class="btn">Connect our team &nbsp;&nbsp; <i class="ri-whatsapp-line"></i></a>
     </div>
@@ -113,16 +114,18 @@
   </section>
 
   <!-- tour section design -->
-  <section class="tour">
+  <section class="tour" id="tour">
     <div class="center-text">
       <h2>Popular Tours</h2>
     </div>
 
     <div class="tour-content">
       <div class="box">
-        <img src="/assets/blog-2.jpg" alt="">
-        <h6>East java</h6>
-        <h4>Mount Bromo</h4>
+        <a style="color: white;" href="kashmir.html">
+        <img src="/assets/kashmirKood.jpg" alt="">
+        <h6>5D&4N</h6>
+        <h4>KASHMIR</h4>
+      </a>
       </div>
 
       <div class="box">
@@ -180,7 +183,7 @@
     </div>
 
   </section>
-
+<!-- 
 
   <section class="contact" id="contact">
     <div class="contact-content">
@@ -199,8 +202,84 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
+  <section id="contactform">
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>Contact a travel researcher</span>
+                <p>We always aim to reply within 24 hours.</p>
+              </div>
+              <div class="app-contact">
+                <a href="https://wa.me/7907222989" target="_blank" style="color: rgb(123, 119, 119);">CONTACT INFO: +91 7907222989</a>
+              </div>
+            </div>
+            <div class="screen-body-item">
+              <form id="submit-form" action="">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="NAME" name="NAME" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" type="email" placeholder="EMAIL" name="EMAIL" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control"  type="number" placeholder="CONTACT NO" name="CONTACT NO" required>
+                  </div>
+                  <div class="app-form-group">
+                    <select class="app-form-control" name="PACKAGE">
+                      <option value="" disabled selected>PACKAGE</option>
+                      <option class="packages" value="collage trip">Collage Trip</option>
+                      <option class="packages" value="Goa">Goa</option>
+                      <option class="packages" value="Manali">Manali</option>
+                    </select>
+                  </div>
+                  <div class="app-form-group message">
+                    <div class="dayandnight" style="display: flex;">
+                      <select class="app-form-control" name="DAY">
+                        <option value="" disabled selected>DAY</option>
+                        <option class="Day" value="1">1</option>
+                        <option class="Day" value="2">2</option>
+                        <option class="Day" value="3">3</option>
+                      </select>
+                      <select class="app-form-control" name="NIGHT">
+                        <option value="" disabled selected>NIGHT</option>
+                        <option class="night" value="1">1</option>
+                        <option class="night" value="2">2</option>
+                        <option class="night" value="3">3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE" name="MESSAGE" required>
+                  </div>
+                  <div class="app-form-group buttons">
+                    <button class="app-form-button">SEND</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- newsletter section design -->
   <!-- <section class="newsletter">
     <div class="newsletter-content">
@@ -256,10 +335,37 @@
 
     <!-- copyright -->
     <div class="copyright">
-      <p>copyright 2024 By SAAB</p>
+      <p>copyright <script>document.write(new Date().getFullYear())</script> By SAAB</p>
     </div>
-
-
+    <script>
+      $("#submit-form").submit((e) => {
+          e.preventDefault();
+          $.ajax({
+              url: "https://script.google.com/macros/s/AKfycbzp67dbZd01sGGGRDyovjLquT8fmr31f-ZQEC7EB9O9ITbnYy1eRrm59Hesih3rJyBWkA/exec",
+              data: $("#submit-form").serialize(),
+              method: "POST",
+              success: function(response) {
+                  console.log(response);
+                  Swal.fire({
+                      title: 'Form Submitted Successfully',
+                      text: 'Our team will contact you within 24 hours. Thank you!',
+                      icon: 'success',
+                      confirmButtonText: 'OK'
+                  }).then(() => {
+                      window.location.reload();
+                  });
+              },
+              error: function(err) {
+                  Swal.fire({
+                      title: 'Error',
+                      text: 'Something went wrong',
+                      icon: 'error',
+                      confirmButtonText: 'OK'
+                  });
+              }
+          });
+      });
+  </script>
   <!-- custom ja file-->
     <script src="main.js"></script>
 </body>

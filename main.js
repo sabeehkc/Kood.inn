@@ -21,3 +21,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+function helo(){
+    console.log("Hello");
+}
