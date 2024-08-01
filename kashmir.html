@@ -31,7 +31,7 @@
       <li><a href="index.html">About us</a></li>
       <li><a href="index.html">Packages</a></li>
       <li><a href="index.html">Culture</a></li>
-      <li><a href="index.html">Contact us</a></li>
+      <li><a href="#contactform">Contact us</a></li>
     </ul>
 
     <div class="h-right">
@@ -79,6 +79,107 @@
       </div>
   </section>
     
+  
+  <section class="introduction">
+    <div class="intro-img">
+        <img src="/assets/Kashmir2.jpg" alt="introduction">
+      </div>
+      <div class="intro-img">
+       <img src="/assets/Kashmir3.jpg" alt="introduction">
+      </div>
+  </section>
+    
+  
+  <section class="introduction">
+    <div class="intro-img">
+        <img src="/assets/Kashmir4.jpg" alt="introduction">
+      </div>
+      <div class="intro-img">
+       <img src="/assets/Kashmir5.jpg" alt="introduction">
+      </div>
+  </section>
+
+  
+  <section class="introduction">
+    <div class="intro-img">
+        <img src="/assets/Kashmir6.jpg" alt="introduction">
+      </div>
+      <!-- <div class="intro-img">
+       <img src="/assets/Kashmir5.jpg" alt="introduction">
+      </div> -->
+  </section>
+
+  
+  <section id="contactform">
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>Contact a travel researcher</span>
+                <p>We always aim to reply within 24 hours.</p>
+              </div>
+              <div class="app-contact">
+                <a href="https://wa.me/7907222989" target="_blank" style="color: rgb(123, 119, 119);">CONTACT INFO: +91 7907222989</a>
+              </div>
+            </div>
+            <div class="screen-body-item">
+              <form id="submit-form" action="">
+                <div class="app-form">
+                  <div class="app-form-group">
+                    <input class="app-form-control" placeholder="NAME" name="NAME" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control" type="email" placeholder="EMAIL" name="EMAIL" required>
+                  </div>
+                  <div class="app-form-group">
+                    <input class="app-form-control"  type="number" placeholder="CONTACT NO" name="CONTACT NO" required>
+                  </div>
+                  <div class="app-form-group">
+                    <select class="app-form-control" name="PACKAGE">
+                      <option value="Kashmir"  selected>Kashmir</option>
+                      
+                    </select>
+                  </div>
+                  <div class="app-form-group message">
+                    <div class="dayandnight" style="display: flex;">
+                      <select class="app-form-control" name="DAY">
+                        <option value="5"  selected>5DAY</option>
+                        
+                      </select>
+                      <select class="app-form-control" name="NIGHT">
+                        <option value="4"  selected>4NIGHT</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="app-form-group message">
+                    <input class="app-form-control" placeholder="MESSAGE" name="MESSAGE" required>
+                  </div>
+                  <div class="app-form-group buttons">
+                    <button class="app-form-button">SEND</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
 
 <!-- footer section design -->
 <section class="footer">
@@ -114,11 +215,40 @@
       </div>
     </div>
  </section>
-
   <!-- copyright -->
   <div class="copyright">
     <p>copyright <script>document.write(new Date().getFullYear())</script> By SAAB</p>
   </div>
+
+  <script>
+    $("#submit-form").submit((e) => {
+        e.preventDefault();
+        $.ajax({
+            url: "https://script.google.com/macros/s/AKfycbzp67dbZd01sGGGRDyovjLquT8fmr31f-ZQEC7EB9O9ITbnYy1eRrm59Hesih3rJyBWkA/exec",
+            data: $("#submit-form").serialize(),
+            method: "POST",
+            success: function(response) {
+                console.log(response);
+                Swal.fire({
+                    title: 'Form Submitted Successfully',
+                    text: 'Our team will contact you within 24 hours. Thank you!',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.reload();
+                });
+            },
+            error: function(err) {
+                Swal.fire({
+                    title: 'Error',
+                    text: 'Something went wrong',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    });
+</script>
 
      <!-- custom ja file-->
      <script src="main.js"></script>

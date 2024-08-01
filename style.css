@@ -11,9 +11,9 @@
 }
 
 :root{
-  --text-color: #c3a619;
-  --bg-color: #000000;
-  --main-color: #f3eeea;
+  --text-color:  #1968c3;
+  --bg-color: #ffffff;
+  --main-color: #000000;
 
   --h1-font: 6rem;
   --h2-font: 3rem;
@@ -21,7 +21,7 @@
 }
 
 body{
-  color: var(--main-color);
+  color: white;
   background: var(--bg-color);
 }
 
@@ -41,7 +41,7 @@ header{
 
 .logo{
   font-size: 33px;
-  color: var(--main-color);
+  color: white;
   font-weight: 700;
 }
 
@@ -54,7 +54,7 @@ span{
 }
 
 .navbar a{
-  color: var(--main-color);
+  color: var(--bg-color);
   font-size: var(--p-font);
   font-weight: 500;
   margin: 15px 20px;
@@ -62,7 +62,7 @@ span{
 }
 
 .navbar a:hover{
-  color: var(--main-color);
+  color: grey;
 }
 
 .h-right{
@@ -71,7 +71,7 @@ span{
 }
 
 .h-right a:first-child{
-  color: var(--main-color);
+  color: var(--bg-color);
   font-size: var(--p-font);
   margin-right: 20px;
 }
@@ -79,19 +79,19 @@ span{
 .h-right a{
   vertical-align: middle;
   font-size: 20px;
-  color: var(--main-color);
+  color: var(--bg-color);
   margin-right: 18px;
   margin-left: 5px;
   transition: all .50s ease;
 }
 
 .h-right a:hover{
-  color: var(--main-color);
+  color: grey;
   transform: translateY(-3px);
 }
 
 #menu-icon{
-  color: var(--main-color);
+  color: var(--bg-color);
   font-size: 30px;
   cursor: pointer;
   z-index: 10001;
@@ -138,6 +138,12 @@ section{
   color: #ffffffab;
   margin-bottom: 35px;
 }
+.home a:hover{
+  transform: translateX(10px);
+  border: 2px solid var(--bg-color);
+  background: transparent;
+  color: var(--bg-color);
+}
 
 .btn {
   display: inline-block;
@@ -163,6 +169,32 @@ header.sticky{
   padding: 8px ;
   background: transparent;
   backdrop-filter: blur(35px);
+}
+
+
+header .logo,
+header .navbar a,
+header .h-right a {
+  color: white;
+}
+
+header .span {
+  color: var(--text-color);
+}
+
+header.scrolled .logo,
+header.scrolled .navbar a,
+header.scrolled .h-right a {
+  color: black;
+}
+
+header.scrolled .navbar a:hover,
+header.scrolled .h-right a:hover {
+  color: grey;
+}
+
+header.scrolled .span {
+  color: var(--text-color);
 }
 
 .feature-content{
@@ -196,13 +228,14 @@ header.sticky{
 
 .feature-content h4{
   font-size: 17px;
+  color: var(--main-color);
   font-weight: 500;
   cursor: pointer;
   transition: all .50s ease;
 }
 
 .feature-content h4:hover{
-  color: var(--text-color);
+  color: grey;
 }
 
 .holiday{
@@ -229,6 +262,7 @@ header.sticky{
 
 .holiday-text h2{
   font-size: var(--h2-font);
+  color: #000000;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 25px;
@@ -238,11 +272,12 @@ header.sticky{
   font-size: var(--p-font);
   font-weight: 500;
   line-height: 30px;
-  color: #ffffffab;
+  color: rgb(98, 94, 94);
   margin-bottom: 30px;
 }
 
 .center-text{
+  color: #000000;
   text-align: center; 
 }
 
@@ -304,6 +339,7 @@ header.sticky{
 
 
 .culture{
+  color: #000000;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -336,7 +372,7 @@ header.sticky{
   font-size: var(--p-font);
   font-weight: 500;
   line-height: 30px;
-  color: #ffffffab;
+  color:gray;
   margin-bottom: 30px;
 }
 
@@ -443,10 +479,13 @@ header.sticky{
 }
 
 
+
 .footer{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px, auto));
   gap: 2rem;
+  background-color: #000000;
+  padding: 20px;
 }
 
 .footer-box{
@@ -458,6 +497,7 @@ header.sticky{
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 15px;
+  color: var(--bg-color);
 }
 
 .footer-box a{
@@ -469,7 +509,7 @@ header.sticky{
 
 .footer-box a:hover{
   transform: translateX(-5px);
-  color: var(--main-color);
+  color: var(--bg-color);
 }
 
 .social a{
@@ -478,7 +518,7 @@ header.sticky{
   justify-content: center;
   height: 45px;
   width: 45px;
-  background: #202020;
+  background: #ffffff;
   color: var(--main-color);
   font-size: 20px;
   border-radius: 50%;
@@ -487,16 +527,18 @@ header.sticky{
 }
 
 .social a:hover{
-  background: var(--text-color);
+  background: var(--main-color);
   color: var(--bg-color);
   transform: translateX(-4px);
 }
 
-.copyright{
+.copyright {
   text-align: center;
   padding: 20px;
   color: #979797;
   font-size: 15px;
+  background-color: #000000;
+  /* border-top: 1px solid #ffffff; */
 }
 
 @media (max-width: 1700px){
