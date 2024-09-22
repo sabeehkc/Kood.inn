@@ -12,9 +12,8 @@
 
 :root{
   --text-color:  #1968c3;
-  --bg-color: #ffffff;
+  --bg-color:  #f0f8ff;
   --main-color: #000000;
-
   --h1-font: 6rem;
   --h2-font: 3rem;
   --p-font: 1rem;
@@ -296,6 +295,8 @@ header.scrolled .span {
 
 .box{
   position: relative;
+  width: 50vh;
+  height: 60vh;
 }
 
 .box img{
@@ -303,7 +304,7 @@ header.scrolled .span {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  filter: brightness(70%);
+  filter: brightness(60%);
   transition: all .3s cubic-bezier(.499,.05,.55,.95);
   will-change: filter;
   display: block;
@@ -504,6 +505,7 @@ header.scrolled .span {
   color: #979797;
   margin-bottom: 0.8rem;
   transition: all .50s ease;
+  font-size: 13px;
 
 }
 
@@ -536,9 +538,9 @@ header.scrolled .span {
   text-align: center;
   padding: 20px;
   color: #979797;
-  font-size: 15px;
+  font-size: 11px;
   background-color: #000000;
-  /* border-top: 1px solid #ffffff; */
+  border-top: 1px solid #ffffff;
 }
 
 @media (max-width: 1700px){
@@ -768,6 +770,10 @@ body, button, input {
  font-size: 0.8rem; 
  color: #8e8888;
 }
+.app-title span {
+  color: white;
+}
+
 
 .app-title:after {
   content: '';
@@ -880,5 +886,3 @@ body, button, input {
     padding: 0;
   }
 }
-
-
