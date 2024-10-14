@@ -12,7 +12,7 @@
   
   :root{
     --text-color: #1968c3;
-    --bg-color: #ffffff;
+    --bg-color:  #f0f8ff;
     --main-color: #000000;
   
     --h1-font: 6rem;
@@ -176,7 +176,7 @@
  height:20vh ;
   width: 100%;
   background: transparent;
-    backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   position: absolute; 
   bottom: 12vh; 
   display: flex;
@@ -197,22 +197,39 @@
     top: 12px;
 }
 
+.introduction {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
 
-.introduction{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 12px;
-  }
-  
-  .intro-img img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
+.intro-img {
+  flex: 1 1 48%; 
+  margin: 10px 0; 
+  padding: 0 10px;
+}
 
+.intro-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.intro-img img:hover {
+  transform: scale(1.1);
+}
+
+.intro-img {
+  overflow: hidden; 
+}
+
+@media (max-width: 768px) {
+  .intro-img {
+    flex: 1 1 100%; 
+    margin-bottom: 20px;
+  }
+}
   
 
 .footer{
@@ -285,7 +302,7 @@
     padding: 7px 8%;
   }
   section{
-      padding: 0px 0px;
+    padding: 50px 8% 40px;
   }
 }
 
@@ -298,6 +315,9 @@
   }
   .main{
     margin-bottom: 180px;
+  }
+  section{
+    padding: 45px 5% 35px;
   }
   :root{
     --h1-font: 4.6rem;
@@ -314,10 +334,6 @@
   .feature-content{
     gap: 1.5rem;
   }  
-  .introduction{
-    gap: 3rem;
-    margin-bottom: 12px;
-  }
   .culture{
     gap: 3rem;
   }  
@@ -356,9 +372,6 @@
 }
 
 @media (max-width: 800px){
-  .introduction{
-    grid-template-columns: 1fr;
-  }
   .culture{
     grid-template-columns: 1fr;
   }
@@ -391,10 +404,14 @@
       height: 65vh;
       margin-bottom: 150px;
   }
-  
+  section{
+    padding: 60px 3% 50px;
+  }
    
   
 }  
+
+
 
 
 @media (max-width: 1200px) {
@@ -531,7 +548,8 @@
     }
     .main{
       height: 45vh;
-    }
+      margin-bottom: 300px;
+  }
     .Kashmir {
       font-size: 7vh;
       font-weight: bold;
@@ -541,6 +559,7 @@
     
   }
 
+  /* Contact From */
   
 *, *:before, *:after {
   box-sizing: border-box;
